@@ -313,6 +313,12 @@ table tbody tr td {
 	padding-top: 0;
 	padding-bottom: 0;
 }
+table tbody tr td a{
+	color: #000;
+}
+table tbody tr td a:hover{
+	color: #5bc0de;
+}
 /* ----- Profile Page Style ------ */
 .profile_page{
 	background-color: #f9f9f9;
