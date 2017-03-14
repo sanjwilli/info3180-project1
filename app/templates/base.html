@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- title -->
+		<title>INFO3180 Project 1</title>
+		<!-- links -->
+		<link rel="stylesheet" href="/static/css/app.css">
+		{% block css %} {% endblock %}
+	</head>
+	<body>
+		<header>
+			{% include 'header.html' %}
+		</header>
+		<main>
+			<div class="container">
+				{% block main %} {% endblock %}
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				{% include 'footer.html' %}
+			</div>
+		</footer>
+
+		<!-- js links should be here -->
+	</body>
+</html>

@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1 class="page-header">Lets Create a Profile</h1>
+<!-- <form action="{{ url_for('make_profiles') }}" method="post" enctype="multipart/form-data">
+	<div>
+		<label for="name">Please Enter your Name</label>
+
+		<input type="text" name="firstname" autocomplete="off" placeholder="First Name">
+		<input type="text" name="lastname" autocomplete="off" placeholder="Last Name">
+
+	</div>
+	<div>
+
+		<label for="age">Please State your Age</label>
+		<input type="number" name="age" autocomplete="off" min="1" max="100">
+
+	</div>
+
+		<label for="bio">Biography</label>
+		<textarea name="biography" placeholder="Say Something About Yourself"></textarea>
+
+	<div>
+
+		<label for="image">Upload your Profile Image</label>
+		<input type="file" name="image">
+
+	</div>
+
+	<ul>
+		<label for="gender">Please Select a Gender</label>
+		<li>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="male">Male</label>
+
+			<div class="check"><div class="inside"></div></div>
+		</li>
+
+		<li>
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label>
+
+			<div class="check"><div class="inside"></div></div>
+		</li>
+
+		<li>
+			<input type="radio" id="other" name="gender" value="other">
+			<label for="other">Other</label>
+
+			<div class="check"><div class="inside"></div></div>
+		</li>
+	</ul>
+</form> -->
+<form action="{{ url_for('make_profiles') }}" method="POST" enctype="multipart/form-data">
+	<div>
+		<label for="name">Please Enter your Name</label>
+
+		{{ form.Firstname(placeholder="First Name") }} <!-- Check out forms.py file to find out another way other than this to add a placeholder while using flask forms --> 
+		{{ form.Lastname(placeholder="Last Name") }}
+
+	</div>
+	<div>
+
+		<label for="age">Please State your Age</label>
+		{{ form.Age }}
+
+	</div>
+	<div>
+
+		<label for="bio">Biography</label>
+		{{ form.Bio(placeholder="Say Something About Yourself. KEEP IT SHORT") }}
+
+	</div>
+	<div>
+
+		<label for="image">Upload your Profile Image</label>
+		{{ form.Image }}
+
+	</div>
+	<ul>
+		<label for="gender">Please Select a Gender</label>
+		<li>
+			<input type="radio" id="male" name="Gender" value="male">
+			<label for="male">Male</label>
+
+			<div class="check"><div class="inside"></div></div>
+		</li>
+
+		<li>
+			<input type="radio" id="female" name="Gender" value="female">
+			<label for="female">Female</label>
+
+			<div class="check"><div class="inside"></div></div>
+		</li>
+
+		<li>
+			<input type="radio" id="other" name="Gender" value="other">
+			<label for="other">Other</label>
+
+			<div class="check"><div class="inside"></div></div>
+		</li>
+	</ul>
+
+	<hr>
+
+	<div>
+		<button type="submit" class="button">Create Profile</button>
+	</div>
+
+</form>
+{% endblock %}

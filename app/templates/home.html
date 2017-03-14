@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1 class="page-header">Welcome to INFO3180 Project 1</h1>
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<div class="alert alert-success">
+			<ul class="flashes">
+				{% for message in messages %}
+					<li>{{ message }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	{% endif %}
+{% endwith %}
+<p>This project consist of creating profile using flask, these profile are to be able to be viewed</p>
+{% endblock %}

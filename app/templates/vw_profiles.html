@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h1 class="page-header">Profile Page</h1>
+
+<div class="profile_page">
+	<div class="float">
+		<img src="{{url_for('static', filename = 'profile_imgs/' + get_profile.username)}}">
+	</div>
+	<div class="pad float">
+		<div>
+			<h1>{{get_profile.first_name}} {{get_profile.last_name}}</h1>
+			<h3>Profile Created On: {{get_profile.date}}</h3>
+		</div>
+		<div>
+			<ul>
+				<li><b>Username:</b> {{get_profile.username}}</li>
+				<li><b>UserID:</b> {{get_profile.userid}}</li>
+				<li><b>Gender:</b> {{get_profile.gender}}</li>
+				<li><b>Age:</b> {{get_profile.age}}</li>
+			</ul>
+		</div>
+		<div>
+			<p>{{get_profile.biography}}</p>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+{% endblock %}
